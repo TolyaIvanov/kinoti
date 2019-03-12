@@ -5,6 +5,7 @@ import createBrowserHistory from "history/createBrowserHistory"
 
 import Main from './Main'
 import Admin from './admin/Panel'
+import MetaTags from 'react-meta-tags'
 
 const history = createBrowserHistory();
 

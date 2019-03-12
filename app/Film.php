@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Film extends Model
 {
-    protected $fillable = ['title', 'description', 'genre', 'year', 'rating', 'isCartoon', 'time'];
+    protected $fillable = ['title', 'description', 'genre', 'year', 'rating', 'poster', 'isCartoon', 'time', 'slug'];
 
     public function actors(){
-        $this->belongsToMany('App\Actor');
+        return $this->belongsToMany('App\Actor');
     }
 
     public function directors() {
-        $this->belongsToMany('App\Director');
+        return $this->belongsToMany('App\Director');
     }
 }

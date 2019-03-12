@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actor extends Model
 {
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'description', 'year', 'photo', 'slug'];
 
     public function films(){
-        $this->belongsToMany('App\Film');
+        return $this->belongsToMany('App\Film');
     }
 
     public function serials() {
-        $this->belongsToMany('App\Serial');
+        return $this->belongsToMany('App\Serial');
     }
 }

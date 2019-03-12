@@ -15,14 +15,15 @@ class CreateSerialsTable extends Migration
     {
         Schema::create('serials', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('title');
             $table->text('description');
             $table->string('genre');
-            $table->string('year');
+            $table->date('year');
             $table->integer('rating');
-            $table->integer('season');
             $table->string('poster');
+            $table->integer('season');
+            $table->string('slug');
+            $table->timestamps();
         });
     }
 

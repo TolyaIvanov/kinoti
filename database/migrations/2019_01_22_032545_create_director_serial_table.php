@@ -15,7 +15,7 @@ class CreateDirectorSerialTable extends Migration
     {
         Schema::create('director_serial', function (Blueprint $table) {
             $table->integer('director_id');
-            $table->integer('film_id');
+            $table->integer('serial_id');
         });
     }
 

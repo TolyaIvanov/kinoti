@@ -15,10 +15,12 @@ class CreateActorsTable extends Migration
     {
         Schema::create('actors', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('name');
             $table->text('description');
+            $table->date('year');
             $table->string('photo');
+            $table->string('slug');
+            $table->timestamps();
         });
     }
 

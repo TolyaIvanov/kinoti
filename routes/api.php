@@ -22,6 +22,10 @@ Route::get('serials/top}', 'SerialsController@serialTop');
 
 Route::get('/premiere', 'FilmsController@premiere');
 
-Route::get('/admin', 'ParserController@getContent');
+Route::get('/actor/{actor}', 'ActorController@show');
+
+Route::get('/director/{director}', 'DirectorController@show');
+
+Route::get('/admin', 'parser\ParserController@getContent');
 
 
